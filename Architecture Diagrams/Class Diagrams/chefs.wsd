@@ -6,6 +6,8 @@ class Cook{
     stack itemsHeld
     void move(String Direction)
     void interact()
+    void pick_up()
+    void place_down()
     void swapCook()
 }
 class Customer{

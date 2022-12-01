@@ -1,0 +1,20 @@
+@startuml
+
+class Orders_Queue{
+    queue orders
+    void enqueue(object order)
+    void dequeue()
+    int queue_size()
+    object peek()
+
+
+}
+
+package "People Objects" {
+Person <|-- Cook
+Person <|-- Customer
+}
+
+Orders_Queue "1.." -- "Many" Customer
+
+@enduml
