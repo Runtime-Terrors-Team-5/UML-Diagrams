@@ -16,7 +16,7 @@ Project starts 2022-11-09
 [Design Architecture] starts 2022-12-03
 [Implementation] starts 2023-01-01
 
-'
+'Requirements
 [Research Requirements] lasts 7 days and is colored in Lavender/Green and starts after [Requirements Elicitation]'s start
 [Research Website] on {Craig:50%} lasts 1 days and is colored in Lavender/Green and starts after [Research Requirements]'s start
 [Research Game Engines] on {Jack:33%}{Kamrul:33%}{Eliash:33%} lasts 2 days and is colored in Lavender/Green and starts after [Research Requirements]'s start
@@ -26,5 +26,8 @@ Project starts 2022-11-09
 [Requirement Elicitation Process Explanation] on {Craig:100%} lasts 3 days and is colored in Lavender/Orange and starts after [Interview Completed]'s end
 [Formatting User & System Requirements] on {Callum:25%}{Jack:25%}{Kamrul:25%}{Chase:25%} lasts 3 days and is colored in Lavender/Orange and starts after [Interview Completed]'s end
 
+[Requirements Completed] happens at [Formatting User & System Requirements]’s end
+
+'Method 
 @endgantt
 '[Formatting User & System Requirements] on {Callum, Jack, Kamrul, Chase} lasts 3 days and is colored in Lavender/Orange and starts after [Analyse Requirements & Writeup]'s start

@@ -1,0 +1,16 @@
+@startuml 
+class Person{
+
+}
+class Cook{
+    stack itemsHeld
+    void move(String Direction)
+    void interact()
+    void swapCook()
+}
+class Customer{
+    Object generateOrder()
+}
+Person <|-- Cook
+Person <|-- Customer
+@enduml
