@@ -7,17 +7,23 @@ class Frying_Station{
     void flip()
 }
 class Cutting_Station{
-    void Cut(Object Ingredient)
+    void cut(Object Ingredient)
 }
 class Ingredient_Station{
-    String Food:output
-    void Output()
+    string food:output
+    void output()
 }
-Class Bin{
+class Bin{
     void Delete(Object food)
 }
+
+class Counter{
+    boolean verify_order()
+}
+
 Station <|-- Frying_Station
 Station <|-- Cutting_Station
 Station <|-- Ingredient_Station
 Station <|-- Bin
+Station <|-- Counter
 @enduml
