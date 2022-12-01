@@ -3,13 +3,13 @@ class Person{
 
 }
 class Cook{
-    stack Items_held
-    void Move(String Direction)
-    void Interact()
-    void Swap_cook()
+    stack itemsHeld
+    void move(String Direction)
+    void interact()
+    void swapCook()
 }
 class Customer{
-    Object Generate_Order()
+    Object generateOrder()
 }
 Person <|-- Cook
 Person <|-- Customer

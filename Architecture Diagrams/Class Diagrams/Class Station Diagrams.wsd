@@ -1,25 +1,25 @@
 @startuml
 class Station{
-    Object Food 
-    boolean Occupied
+    Object food 
+    boolean occupied
 }
-class Frying_Station{
+class FryingStation{
     void flip()
 }
-class Cutting_Station{
-    void Cut(Object Ingredient)
+class CuttingStation{
+    void cut(Object ingredient)
 }
-class Ingredient_Station{
-    String Food:output
-    void Output()
+class IngredientStation{
+    String food
+    void output()
 }
 Class Bin{
-    void Delete(Object food)
+    void delete(Object food)
 }
-class Non_Interactive_Station{}
-Station <|-- Frying_Station
-Station <|-- Cutting_Station
-Station <|-- Ingredient_Station
+class NonInteractiveStation{}
+Station <|-- FryingStation
+Station <|-- CuttingStation
+Station <|-- IngredientStation
 Station <|-- Bin
-Station <|-- Non_Interactive_Station
+Station <|-- NonInteractiveStation
 @enduml
