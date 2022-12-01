@@ -16,8 +16,10 @@ class Ingredient_Station{
 Class Bin{
     void Delete(Object food)
 }
+class Non_Interactive_Station{}
 Station <|-- Frying_Station
 Station <|-- Cutting_Station
 Station <|-- Ingredient_Station
 Station <|-- Bin
+Station <|-- Non_Interactive_Station
 @enduml
