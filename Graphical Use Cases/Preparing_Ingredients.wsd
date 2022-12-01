@@ -1,0 +1,28 @@
+' Preview with Alt D
+' Graphical Use Case for preparing ingredients
+@startuml
+Edit online	
+@startuml
+skinparam titleBorderRoundCorner 15
+skinparam titleBorderThickness 2
+skinparam titleBorderColor red
+title Preparing\nIngredients
+
+:User: as User
+:Active Chef: as Chef
+(Stack) as Inventory
+rectangle Cutting_Station {
+    usecase "Chop Item" as Cut
+}
+rectangle Ingredient_Station {
+    usecase "Grab Item" as Grab
+}
+
+Chef <|-- User
+Chef -- Grab 
+Inventory <-- Grab : Item
+Inventory --> Cut : Item
+Chef -- Cut
+Inventory <-- Cut : Chopped Item
+@enduml
+'[Formatting User & System Requirements] on {Callum, Jack, Kamrul, Chase} lasts 3 days and is colored in Lavender/Orange and starts after [Analyse Requirements & Writeup]'s start

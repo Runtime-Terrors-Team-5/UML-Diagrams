@@ -1,0 +1,50 @@
+' Preview with Alt D
+' Sequence diagram for preparing ingredients
+@startuml
+skinparam titleBorderRoundCorner 15
+skinparam titleBorderThickness 2
+skinparam titleBorderColor red
+title Preparing\nIngredients
+
+entity Ingredient_Station as Grab
+actor Active_Chef as Chef
+participant Stack as Inventory
+entity Cutting_Station as Cut
+entity Bin as Bin
+
+' Grabbing Item
+group Grabbing_Item
+    Grab <- Chef : Grab(Stack) 
+    note right: if Station is not empty & Stack not full
+    Grab -> Inventory : Item
+end
+
+' Attempting to cut Item
+group Chopping_Item
+    Chef -> Cut : Place(Stack[Head])
+    note left: if Station is empty
+    Inventory -> Cut : Item
+    Chef -> Cut : Chop() 
+    note left: if Item is choppable
+    ' Successful Chop/Shape
+    alt Chopped/Shaped Well
+        Cut -> Cut : Item -> \nChopped Item
+        note left: if Q/E mashed correctly
+        Chef -> Cut : Grab(Stack) 
+        note left: if Station is not empty \n&  Stack not full
+        Inventory <- Cut : Chopped Item
+    ' Unsuccessful Chop/Shape
+    else Chopped/Shaped Badly
+        Cut -> Cut : Item -> \nMessy Item
+        note left: if Q/E mashed incorrectly
+        Chef -> Cut : Grab(Stack) 
+        note left: if Station is not empty \n&  Stack not full
+        Inventory <- Cut : Messy Item
+        Chef -> Bin : Place(Stack[Head]])
+        Inventory -> Bin : Messy Item
+    end
+end
+
+
+@enduml
+'[Formatting User & System Requirements] on {Callum, Jack, Kamrul, Chase} lasts 3 days and is colored in Lavender/Orange and starts after [Analyse Requirements & Writeup]'s start
