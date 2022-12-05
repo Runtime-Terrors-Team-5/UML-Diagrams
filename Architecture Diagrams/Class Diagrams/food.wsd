@@ -1,0 +1,51 @@
+@startuml
+package "Food_Objects" {
+
+class Food{
+    boolean cooked
+    boolean cut
+    stack plate
+}
+
+class Plate{
+    stack food_on_it
+}
+
+class Lettuce{
+    boolean cut
+}
+
+class Tomato{
+    boolean cut
+}
+
+class Cheese{
+}
+
+class Buns{
+
+}
+
+class Patty{
+    boolean cooked
+    boolean burnt
+}
+
+}
+
+class IngredientStation{
+    string food
+    object output_food()
+}
+
+IngredientStation "...1" -- "....1" Food
+
+
+
+Food <|-- Lettuce
+Food <|-- Buns
+Food <|-- Patty
+Food <|-- Cheese
+Food <|-- Tomato
+Food <|-- Plate
+@enduml

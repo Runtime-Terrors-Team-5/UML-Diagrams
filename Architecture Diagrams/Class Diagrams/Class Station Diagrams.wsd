@@ -1,17 +1,17 @@
 @startuml
 class Station{
-    Object food 
+    object food
     boolean occupied
 }
 class FryingStation{
     void flip()
 }
 class CuttingStation{
-    void cut(Object ingredient)
+    void cut()
 }
 class IngredientStation{
-    String food
-    void output()
+    string food
+    object output_food()
 }
 Class Bin{
     void delete(Object food)

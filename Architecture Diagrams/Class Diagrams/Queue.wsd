@@ -10,7 +10,7 @@ class Orders_Queue{
 
 }
 
-package "People Objects" {
+package "People_Objects" {
 Person <|-- Cook
 Person <|-- Customer
 }
