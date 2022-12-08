@@ -1,0 +1,45 @@
+' Preview with Alt D
+@startgantt
+hide ressources names
+skinparam classFontSize 5
+'Main Goals
+[Team Forming] lasts 7 days and is colored in Plum/Green
+[Requirements Elicitation] lasts 10 days and is colored in Plum/Green
+[Risk Assessment and Mitigation] lasts 11 days and is colored in Plum/Green
+[Method Selection & Planning] lasts 7 days and is colored in Plum/Orange
+[Design Architecture] lasts 24 days and is colored in Plum/Orange
+[Implementation] lasts 35 days and is colored in Plum/Red
+Project starts 2022-11-09
+[Team Forming] starts 2022-11-09
+[Requirements Elicitation] starts 2022-11-16
+[Method Selection & Planning] starts 2022-12-07
+[Risk Assessment and Mitigation] starts 2022-11-26
+[Design Architecture] starts 2022-12-01
+[Implementation] starts 2023-01-01
+
+'Requirements
+[Research Requirements] lasts 7 days and is colored in Lavender/Green and starts after [Requirements Elicitation]'s start
+[Research Website] on {Craig:50%} lasts 1 days and is colored in Lavender/Green and starts after [Research Requirements]'s start
+[Research Game Engines] on {Jack:33%}{Kamrul:33%}{Eliash:33%} lasts 2 days and is colored in Lavender/Green and starts after [Research Requirements]'s start
+[Interview Preparation] on {Chase:30%}{Callum:30%}{Jack:10%}{Kamrul:10%}{Eliash:10%}{Craig:10%} lasts 7 days and is colored in Lavender/Green and starts after [Research Requirements]’s start
+[Interview Completed] happens at [Interview Preparation]’s end
+
+[Requirement Elicitation Process Explanation] on {Craig:100%} lasts 3 days and is colored in Lavender/Green and starts after [Interview Completed]'s end
+[Formatting User & System Requirements] on {Callum:25%}{Jack:25%}{Kamrul:25%}{Chase:25%} lasts 3 days and is colored in Lavender/Green and starts after [Interview Completed]'s end
+[Requirements Completed] happens at [Formatting User & System Requirements]’s end
+
+'Risk Assessment and Mitgation
+[Risk Management Process] on {Callum:100%} lasts 11 days and is colored in Lavender/Green and starts after [Risk Assessment and Mitigation]'s start
+[Constructing Risk Register] on {Callum:75%}{Craig:25%} lasts 11 days and is colored in Lavender/Green and starts after [Risk Assessment and Mitigation]'s start
+[Risk Assessment Completed] happens at [Constructing Risk Register]’s end
+
+'Method Selection & Planning
+[Engineering Methods] on {Jack:100%} lasts 7 days and is colored in Lavender/Orange and starts after [Method Selection & Planning]'s start
+[Team Approach] on {Jack:100%} lasts 7 days and is colored in Lavender/Orange and starts after [Method Selection & Planning]'s start
+[Systematic Project Plan] on {Craig:100%} lasts 7 days and is colored in Lavender/Orange and starts after [Method Selection & Planning]'s start
+
+'Design Architecture
+[UML Class Diagrams] on {Kamrul:50%}{Chase:50%} lasts 13 days and is colored in Lavender/Orange and starts 5 days after [Risk Assessment and Mitigation]'s start
+[Assets experimentation] on {Callum:50%}{Chase:50%} lasts 7 days and is colored in Lavender/Orange and starts 6 days after [UML Class Diagrams]'s start
+
+@endgantt
