@@ -1,0 +1,58 @@
+@startuml
+interface Screens{
+    void show()
+    void render(float delta)
+    void resize(int width, int height)
+    void pause()
+    void resume()
+    void hide()
+    void dispose()
+}
+class Menu_Screen{
+    private MyGame game
+    private Viewport game_port
+    private OrthographicCamera gamecam
+
+    public Menu_Screen(MyGame game)
+
+}
+class Play_Screen{
+     private MyGame game
+     private Viewport game_port
+     private OrthographicCamera gamecam
+    public Play_Screen(MyGame game)
+}
+
+class Credits_Screen{
+    private MyGame game
+    private Viewport game_port
+    private OrthographicCamera gamecam
+    private Hud hud
+    public Credits_Screen(MyGame game)
+}
+
+class Hud {
+    public Stage stage
+    private Viewport viewport
+
+    Label credits_label
+    Label name1
+    Label name2
+    Label name3
+    Label name4
+    Label name5
+    Label name6
+
+    public Hud(SpriteBatch sb)
+}
+
+
+Credits_Screen "provides screen conent" -- "." Hud
+
+Screens <|-- Credits_Screen
+Screens <|-- Menu_Screen
+Screens <|-- Play_Screen
+
+
+
+@enduml
