@@ -1,4 +1,5 @@
 @startuml
+package Screens{
 interface Screens{
     void show()
     void render(float delta)
@@ -30,7 +31,7 @@ class Credits_Screen{
     private Hud hud
     public Credits_Screen(MyGame game)
 }
-
+}
 class Hud {
     public Stage stage
     private Viewport viewport
@@ -47,7 +48,7 @@ class Hud {
 }
 
 
-Credits_Screen "provides screen conent" -- "." Hud
+Credits_Screen "." -- "provides screen content" Hud
 
 Screens <|-- Credits_Screen
 Screens <|-- Menu_Screen
