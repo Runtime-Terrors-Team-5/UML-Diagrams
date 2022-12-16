@@ -32,6 +32,7 @@ class Credits_Screen{
     public Credits_Screen(MyGame game)
 }
 }
+package Scenes{
 class Hud {
     public Stage stage
     private Viewport viewport
@@ -46,9 +47,9 @@ class Hud {
 
     public Hud(SpriteBatch sb)
 }
+}
 
-
-Credits_Screen "." -- "provides screen content" Hud
+Credits_Screen "." -- "." Hud
 
 Screens <|-- Credits_Screen
 Screens <|-- Menu_Screen
