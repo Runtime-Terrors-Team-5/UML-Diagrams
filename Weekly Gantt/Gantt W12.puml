@@ -1,5 +1,5 @@
 ' Preview with Alt D
-' Date: 08-12-2022
+' Date: 15-12-2022
 @startgantt
 hide ressources names
 skinparam classFontSize 5
@@ -7,16 +7,16 @@ skinparam classFontSize 5
 [Team Forming] lasts 7 days and is colored in Plum/Green
 [Requirements Elicitation] lasts 10 days and is colored in Plum/Green
 [Risk Assessment and Mitigation] lasts 11 days and is colored in Plum/Green
-[Method Selection & Planning] lasts 7 days and is colored in Plum/Orange
-[Design Architecture] lasts 24 days and is colored in Plum/Orange
-[Implementation] lasts 35 days and is colored in Plum/Red
+[Method Selection & Planning] lasts 16 days and is colored in Plum/Orange
+[Design Architecture] lasts 22 days and is colored in Plum/Orange
+[Implementation] lasts 49 days and is colored in Plum/Red
 Project starts 2022-11-09
 [Team Forming] starts 2022-11-09
 [Requirements Elicitation] starts 2022-11-16
 [Method Selection & Planning] starts 2022-12-07
 [Risk Assessment and Mitigation] starts 2022-11-26
 [Design Architecture] starts 2022-12-01
-[Implementation] starts 2023-01-01
+[Implementation] starts 2022-12-14
 
 'Requirements
 [Research Requirements] lasts 7 days and is colored in Lavender/Green and starts after [Requirements Elicitation]'s start
@@ -35,12 +35,21 @@ Project starts 2022-11-09
 [Risk Assessment Completed] happens at [Constructing Risk Register]’s end
 
 'Method Selection & Planning
-[Engineering Methods] on {Jack:100%} lasts 7 days and is colored in Lavender/Orange and starts after [Method Selection & Planning]'s start
-[Team Approach] on {Jack:100%} lasts 7 days and is colored in Lavender/Orange and starts after [Method Selection & Planning]'s start
-[Systematic Project Plan] on {Craig:100%} lasts 7 days and is colored in Lavender/Orange and starts after [Method Selection & Planning]'s start
+[Engineering Methods] on {Jack:100%} lasts 7 days and is colored in Lavender/Green and starts after [Method Selection & Planning]'s start
+[Team Approach] on {Jack:50%} lasts 8 days and is colored in Lavender/Orange and starts after [Method Selection & Planning]'s start
+[Systematic Project Plan] on {Craig:50%} lasts 8 days and is colored in Lavender/Orange and starts after [Method Selection & Planning]'s start
 
 'Design Architecture
-[UML Class Diagrams] on {Kamrul:50%}{Chase:50%} lasts 13 days and is colored in Lavender/Orange and starts 5 days after [Risk Assessment and Mitigation]'s start
-[Assets experimentation] on {Callum:50%}{Chase:50%} lasts 7 days and is colored in Lavender/Orange and starts 6 days after [UML Class Diagrams]'s start
+[UML Class Diagrams] on {Kamrul:50%}{Chase:50%} lasts 22 days and is colored in Lavender/Orange and starts 5 days after [Risk Assessment and Mitigation]'s start
+[Assets experimentation] on {Callum:100%} lasts 7 days and is colored in Lavender/Green and starts 6 days after [UML Class Diagrams]'s start
+[Assets pack made] happens at [Assets experimentation]’s end
+
+'Implementation
+[LibGDX experimentation] on {Chase:100%} lasts 9 days and is colored in Lavender/Orange and starts after [Implementation]'s start
+
+'Winter Break
+2022/12/23 to 2023/01/02 are colored in lightblue
+2022/12/23 to 2023/01/02 are named [Winter Break]
+2022/12/23 to 2023/01/02 are closed
 
 @endgantt
