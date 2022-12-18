@@ -1,5 +1,8 @@
 @startuml
+<<<<<<< Updated upstream
 package Screens{
+=======
+>>>>>>> Stashed changes
 interface Screens{
     void show()
     void render(float delta)
@@ -31,8 +34,17 @@ class Credits_Screen{
     private Hud hud
     public Credits_Screen(MyGame game)
 }
+<<<<<<< Updated upstream
 }
 package Scenes{
+=======
+<<<<<<< HEAD:Architecture Diagrams/Class Diagrams/Scenes_and_Screens_package.puml
+}
+package Scenes{
+=======
+
+>>>>>>> parent of a76e8cc (class syntax):Architecture Diagrams/Class Diagrams/Screens_package.puml
+>>>>>>> Stashed changes
 class Hud {
     public Stage stage
     private Viewport viewport
@@ -49,7 +61,16 @@ class Hud {
 }
 }
 
+<<<<<<< Updated upstream
 Credits_Screen "." -- "." Hud
+=======
+<<<<<<< HEAD:Architecture Diagrams/Class Diagrams/Scenes_and_Screens_package.puml
+Credits_Screen "." -- "." Hud
+=======
+
+Credits_Screen "provides screen conent" -- "." Hud
+>>>>>>> parent of a76e8cc (class syntax):Architecture Diagrams/Class Diagrams/Screens_package.puml
+>>>>>>> Stashed changes
 
 Screens <|-- Credits_Screen
 Screens <|-- Menu_Screen
