@@ -8,6 +8,7 @@ class Cook{
     void interact()
     void pick_up()
     void place_down()
+    void craft()
     void swapCook()
 }
 class Customer{
