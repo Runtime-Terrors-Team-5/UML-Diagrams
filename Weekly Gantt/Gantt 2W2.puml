@@ -10,7 +10,8 @@ skinparam classFontSize 5
 [Risk Assessment and Mitigation] lasts 11 days and is colored in Plum/Green
 [Method Selection & Planning] lasts 16 days and is colored in Plum/Green
 [Design Architecture] lasts 39 days and is colored in Plum/Orange
-[Implementation] lasts 37 days and is colored in Plum/Orange
+[Implementation] lasts 32 days and is colored in Plum/Orange
+[Presentation] lasts 2 days and is colored in Plum/Red
 Project starts 2022-11-09
 [Team Forming] starts 2022-11-09
 [Requirements Elicitation] starts 2022-11-16
@@ -18,6 +19,7 @@ Project starts 2022-11-09
 [Risk Assessment and Mitigation] starts 2022-11-26
 [Design Architecture] starts 2022-12-01
 [Implementation] starts 2022-12-14
+[Presentation] starts 2023-01-31
 
 'Requirements
 [Research Requirements] lasts 7 days and is colored in Lavender/Green and starts after [Requirements Elicitation]'s start
@@ -43,19 +45,23 @@ Project starts 2022-11-09
 
 'Design Architecture
 [UML Class Diagrams] on {Kamrul:50%}{Chase:50%} lasts 22 days and is colored in Lavender/Green and starts 5 days after [Risk Assessment and Mitigation]'s start
-[Architecture Write-Up] lasts 15 days and is coloured in Lavender/Orange and starts 10 days after [UML Class Diagrams]'s end
+[Architecture Write-Up] on {Callum} lasts 15 days and is coloured in Lavender/Orange and starts 10 days after [UML Class Diagrams]'s end
 [Assets experimentation] on {Callum:100%} lasts 7 days and is colored in Lavender/Green and starts 6 days after [UML Class Diagrams]'s start
 [Assets pack made] happens at [Assets experimentation]’s end
 
 'Misc
 [Catch-Up Meeting] happens at [Architecture Write-Up]'s start
-[Documentation Review] on {Craig:50%}{Jack:50%} lasts 6 days and is colored in Lavender/Orange and starts after [Catch-Up Meeting]'s start
-[Updating Website] on {Callum:50%}{Kamrul:50%} lasts 6 days and is colored in Lavender/Orange and starts after [Catch-Up Meeting]'s start
+[Documentation Review] on {Craig:50%}{Jack:50%} lasts 6 days and is colored in Lavender/Green and starts after [Catch-Up Meeting]'s start
+[Updating Website] on {Callum:50%}{Kamrul:50%} lasts 6 days and is colored in Lavender/Green and starts after [Catch-Up Meeting]'s start
 
 'Implementation
 [LibGDX experimentation] on {Chase:100%} lasts 9 days and is colored in Lavender/Green and starts after [Implementation]'s start
-[Implementation Sprint] on {Chase:50%} lasts 11 days and is colored in Lavender/Orange and starts after [LibGDX experimentation]'s end
-[Implementation Sprint2] on {Chase:25%}
+[Implementation Sprint] on {Chase:50%} lasts 3 days and is colored in Lavender/Green and starts after [LibGDX experimentation]'s end
+[Implementation Sprint2] on {Chase:33%}{Craig:33%}{Jack:33%} lasts 8 days and is colored in Lavender/Orange and starts 12 days after [Implementation Sprint]'s end
+[Third Party Asset/Library Review] on {Kamrul:100%} lasts 2 days and is coloured in Lavender/Orange and starts 12 days after [Implementation Sprint]'s end
+
+'Presentation
+
 
 'Breaks
 2022/12/23 to 2023/01/02 are colored in lightblue
