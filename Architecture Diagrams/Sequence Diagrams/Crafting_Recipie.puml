@@ -1,0 +1,40 @@
+' Preview with Alt D
+' Sequence diagram for preparing ingredients
+@startuml
+skinparam titleBorderRoundCorner 15
+skinparam titleBorderThickness 2
+skinparam titleBorderColor red
+title Crafting\nRecipie
+
+actor Active_Chef as Chef
+participant Stack as Inventory
+participant Craft_Prompt as GUI
+participant Recipie_List as Recipies
+
+' Placing Item
+group Checking_Stack
+    loop while True
+        Inventory -> Recipies : Check(Stack)
+        note left: if Inventory is updated
+        Chef <- Recipies : Boolean [True/False]
+        alt Valid Recipie (True)
+        Inventory -> GUI : Prompt users to craft
+        note left: If Inventory contains all ingredients for a valid recipie
+        Chef -> GUI : Craft(Stack)
+        note left: Exits loop after Chef starts crafting
+        end
+    end
+end
+
+
+' Attempting to Fry Item
+group Craft_Item
+    Inventory -> Recipies : Craft(Stack)
+    note left: Passes prepared ingredients on
+    Chef <- Recipies : Updated_Stack
+    note left: Stack now returns the crafted meal
+end
+
+
+@enduml
+'[Formatting User & System Requirements] on {Callum, Jack, Kamrul, Chase} lasts 3 days and is colored in Lavender/Orange and starts after [Analyse Requirements & Writeup]'s start

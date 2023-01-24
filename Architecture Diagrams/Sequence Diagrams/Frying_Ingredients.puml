@@ -1,0 +1,45 @@
+' Preview with Alt D
+' Sequence diagram for preparing ingredients
+@startuml
+skinparam titleBorderRoundCorner 15
+skinparam titleBorderThickness 2
+skinparam titleBorderColor red
+title Frying\nIngredients
+
+actor Active_Chef as Chef
+participant Stack as Inventory
+entity Frying_Station as Fry
+entity Bin as Bin
+
+' Attempting to Fry Item
+group Frying_Item
+    Chef -> Fry : Place(Stack[Head])
+    note left: if Station is empty
+    Inventory -> Fry : Item
+    Chef -> Fry : Fry() 
+    note left: if Item is fryable
+    ' Successful Fry
+    alt Fried Well
+        Fry -> Fry : Item -> \nFried Item
+        note left: if Item left cooking for long enough
+        Chef -> Fry : Grab(Stack) 
+        note left: if Station is not empty \n&  Stack not full
+        Inventory <- Fry : Fried Item
+    ' Overcooked Item
+    else Overcooked
+        Fry -> Fry : Item -> \nOvercooked Item
+        note left: if Item left cooking for too long
+        Chef -> Fry : Grab(Stack) 
+        note left: if Station is not empty \n&  Stack not full
+        Inventory <- Fry : Overcooked Item
+        Chef -> Bin : Place(Stack[Head]])
+        Inventory -> Bin : Overcooked Item
+    else Undercooked
+        Fry -> Fry : Item -> \nItem
+        note left: if Item not left cooking for long enough
+        Chef -> Fry : Grab(Stack) 
+        note left: if Station is not empty \n&  Stack not full
+        Inventory <- Fry : Item
+    end
+end
+@enduml
