@@ -1,5 +1,5 @@
 ' Preview with Alt D
-' Sequence diagram for preparing ingredients
+' Sequence diagram for Frying ingredients using hob
 @startuml
 skinparam titleBorderRoundCorner 15
 skinparam titleBorderThickness 2
@@ -8,38 +8,38 @@ title Frying\nIngredients
 
 actor Active_Chef as Chef
 participant Stack as Inventory
-entity Frying_Station as Fry
+entity Frying_Station as Hob
 entity Bin as Bin
 
 ' Attempting to Fry Item
 group Frying_Item
-    Chef -> Fry : Place(Stack[Head])
+    Chef -> Hob : Place(Stack[Head])
     note left: if Station is empty
-    Inventory -> Fry : Item
-    Chef -> Fry : Fry() 
-    note left: if Item is fryable
+    Inventory -> Hob : Item
+    Chef -> Hob : Hob() 
+    note left: if Item is Fryable
     ' Successful Fry
     alt Fried Well
-        Fry -> Fry : Item -> \nFried Item
+        Hob -> Hob : Item -> \nFried Item
         note left: if Item left cooking for long enough
-        Chef -> Fry : Grab(Stack) 
+        Chef -> Hob : Grab(Stack) 
         note left: if Station is not empty \n&  Stack not full
-        Inventory <- Fry : Fried Item
+        Inventory <- Hob : Fried Item
     ' Overcooked Item
     else Overcooked
-        Fry -> Fry : Item -> \nOvercooked Item
+        Hob -> Hob : Item -> \nOvercooked Item
         note left: if Item left cooking for too long
-        Chef -> Fry : Grab(Stack) 
+        Chef -> Hob : Grab(Stack) 
         note left: if Station is not empty \n&  Stack not full
-        Inventory <- Fry : Overcooked Item
+        Inventory <- Hob : Overcooked Item
         Chef -> Bin : Place(Stack[Head]])
         Inventory -> Bin : Overcooked Item
     else Undercooked
-        Fry -> Fry : Item -> \nItem
+        Hob -> Hob : Item -> \nItem
         note left: if Item not left cooking for long enough
-        Chef -> Fry : Grab(Stack) 
+        Chef -> Hob : Grab(Stack) 
         note left: if Station is not empty \n&  Stack not full
-        Inventory <- Fry : Item
+        Inventory <- Hob : Item
     end
 end
 @enduml

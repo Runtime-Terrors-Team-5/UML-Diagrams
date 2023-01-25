@@ -1,0 +1,28 @@
+' Preview with Alt D
+' Sequence diagram for serving meals 
+@startuml
+skinparam titleBorderRoundCorner 15
+skinparam titleBorderThickness 2
+skinparam titleBorderColor red
+title Serving\Meal
+
+actor Active_Chef as Chef
+participant Stack as Inventory
+entity Serving_Station as Serve
+
+
+' Placing Item on counter temporarily
+group Serving_Item
+    Chef -> Store : Place(Stack[Head])
+    note left: if Station is empty
+    ' A valid meal that can be served is submitted
+    alt Correct_Meal
+        Inventory -> Serve : Meal
+    ' A invalid meal that cannot be served is submitted
+    else Incorrect_Meal / Invalid Meal
+        Inventory -> Serve: Item
+        Chef -> Serve : Grab(Stack)
+        Inventory <- Serve : Item
+    end
+end
+@enduml

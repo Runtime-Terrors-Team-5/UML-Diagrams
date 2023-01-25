@@ -1,0 +1,18 @@
+' Preview with Alt D
+' Sequence diagram for preparing ingredients
+@startuml
+skinparam titleBorderRoundCorner 15
+skinparam titleBorderThickness 2
+skinparam titleBorderColor red
+title Disposing\nIngredients
+
+actor Active_Chef as Chef
+participant Stack as Inventory
+entity Bin as Bin
+
+' Disposing unwanted item
+group Disposing_Item
+    Chef -> Bin : Place(Stack[Head])
+    Inventory -> Bin : Item
+end
+@enduml

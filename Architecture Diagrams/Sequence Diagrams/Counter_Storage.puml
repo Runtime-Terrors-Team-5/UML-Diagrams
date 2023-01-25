@@ -1,0 +1,28 @@
+' Preview with Alt D
+' Sequence diagram for temporarily storing ingredients on counters 
+' (typically for getting an ingredient from bottom of stack)
+@startuml
+skinparam titleBorderRoundCorner 15
+skinparam titleBorderThickness 2
+skinparam titleBorderColor red
+title Counter\nStorage
+
+actor Active_Chef as Chef
+participant Stack as Inventory
+entity Counter as Store
+
+' Placing Item on counter temporarily
+group Placing_Item
+    Chef -> Store : Place(Stack[Head])
+    note left: if Station is empty
+    Inventory -> Store : Item
+end
+
+' Taking Item from counter
+group Taking_Item
+    Chef -> Store : Grab(Stack) 
+    note left: if Station is not empty & Stack not full
+    Inventory <- Store : Item
+end
+
+@enduml

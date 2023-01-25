@@ -1,5 +1,5 @@
 ' Preview with Alt D
-' Sequence diagram for preparing ingredients
+' Sequence diagram for crafting meals from ingredients
 @startuml
 skinparam titleBorderRoundCorner 15
 skinparam titleBorderThickness 2
@@ -8,10 +8,10 @@ title Crafting\nRecipie
 
 actor Active_Chef as Chef
 participant Stack as Inventory
-participant Craft_Prompt as GUI
-participant Recipie_List as Recipies
+entity Craft_Prompt as GUI
+entity Recipie_List as Recipies
 
-' Placing Item
+' Checking stack for a valid combination of items that can be crafted into a meal
 group Checking_Stack
     loop while True
         Inventory -> Recipies : Check(Stack)
@@ -26,15 +26,12 @@ group Checking_Stack
     end
 end
 
-
-' Attempting to Fry Item
+' Crafting meal out of ingredients in the stack
 group Craft_Item
     Inventory -> Recipies : Craft(Stack)
     note left: Passes prepared ingredients on
-    Chef <- Recipies : Updated_Stack
+    Chef <- Recipies : Stack <- Updated_Stack
     note left: Stack now returns the crafted meal
 end
 
-
 @enduml
-'[Formatting User & System Requirements] on {Callum, Jack, Kamrul, Chase} lasts 3 days and is colored in Lavender/Orange and starts after [Analyse Requirements & Writeup]'s start

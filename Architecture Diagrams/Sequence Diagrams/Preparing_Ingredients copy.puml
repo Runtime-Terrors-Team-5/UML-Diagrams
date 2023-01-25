@@ -12,14 +12,14 @@ participant Stack as Inventory
 entity Cutting_Station as Cut
 entity Bin as Bin
 
-' Grabbing Item
+' Grabbing Item from Ingredient_Station
 group Grabbing_Item
     Grab <- Chef : Grab(Stack) 
     note right: if Station is not empty & Stack not full
     Grab -> Inventory : Item
 end
 
-' Attempting to cut Item
+' Attempting to Chop/Shape Item
 group Chopping_Item
     Chef -> Cut : Place(Stack[Head])
     note left: if Station is empty
