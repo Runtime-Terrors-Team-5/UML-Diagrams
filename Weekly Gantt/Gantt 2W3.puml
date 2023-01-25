@@ -60,11 +60,16 @@ Project starts 2022-11-09
 [LibGDX experimentation] on {Chase:100%} lasts 9 days and is colored in Lavender/Green and starts after [Implementation]'s start
 [Implementation Sprint] on {Chase:50%} lasts 3 days and is colored in Lavender/Green and starts after [LibGDX experimentation]'s end
 [Implementation Sprint2] on {Chase:33%}{Craig:33%}{Jack:33%} lasts 8 days and is colored in Lavender/Green and starts 12 days after [Implementation Sprint]'s end
-[Final Sprint] on {Chase:25%}{Craig:25%}{Jack:25%}{Kamrul:25%} lasts 8 days and is colored in Lavender/Orange and starts 4 days after [Implementation Sprint2]'s end
+
+' Final Sprint
 [Third Party Asset/Library Review] on {Kamrul:50%} lasts 2 days and is coloured in Lavender/Green and starts 12 days after [Implementation Sprint]'s end
+[Final Implementation Sprint] on {Chase:33%}{Craig:33%}{Jack:33%} lasts 7 days and is colored in Lavender/Orange and starts 4 days after [Implementation Sprint2]'s end
+[Quality Checking Docs] on {Callum:50%} lasts 4 days and is coloured in Lavender/Orange and starts 4 days after [Implementation Sprint2]'s end
+[Final Website Update] on {Kamrul:50%} lasts 4 days and is coloured in Lavender/Orange and starts 4 days after [Implementation Sprint2]'s end
+
 
 'Presentation
-
+'Covered above
 
 'Breaks
 2022/12/23 to 2023/01/02 are colored in lightblue
