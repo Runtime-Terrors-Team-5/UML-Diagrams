@@ -44,7 +44,4 @@ group Chopping_Item
         Inventory -> Bin : Messy Item
     end
 end
-
-
 @enduml
-'[Formatting User & System Requirements] on {Callum, Jack, Kamrul, Chase} lasts 3 days and is colored in Lavender/Orange and starts after [Analyse Requirements & Writeup]'s start

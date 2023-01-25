@@ -1,5 +1,5 @@
 ' Preview with Alt D
-' Sequence diagram for preparing ingredients
+' Sequence diagram for disposing ingredients
 @startuml
 skinparam titleBorderRoundCorner 15
 skinparam titleBorderThickness 2

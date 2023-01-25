@@ -1,0 +1,37 @@
+' Preview with Alt D
+' Sequence diagram for preparing ingredients
+@startuml
+skinparam titleBorderRoundCorner 15
+skinparam titleBorderThickness 2
+skinparam titleBorderColor red
+title Screen\nNavigation
+
+
+entity Credit_Screen as Credits
+entity Tutorial_Screen as Help
+actor User as User
+entity Main_Menu as Menu
+entity Play_Screen as Game
+
+
+' Menu, Interacting with buttons, Once game loads exits menu screen loop
+' Loop used to allow users to return to menu screen after done with credits and tutorial
+group Menu
+    loop While True
+        User -> Menu : Render(Menu)
+        note left: Functional on Windows & Linux
+        alt Credits Button Pressed
+            Credits <- User : Render(Credits)
+            note right: Once back button is pressed, loops to menu
+        else Help Button Pressed
+            Help <- User : Render (Tutorial)
+            note right: Once back button is pressed, loops to menu
+        else Scenario Mode Button Pressed
+            User -> Game : Render (Play_Screen)
+            note left: Breaks Menu Loop
+        else Endless Mode Button Pressed
+            User -> Game : Render (Play_Screen)
+            note left: Breaks Menu Loop, Game will load up variant
+    end
+end
+@enduml
