@@ -13,7 +13,7 @@ entity Serving_Station as Serve
 
 ' Placing Item on counter temporarily
 group Serving_Item
-    Chef -> Store : Place(Stack[Head])
+Chef -> Serve : Place(Stack[Head])
     note left: if Station is empty
     ' A valid meal that can be served is submitted
     alt Correct_Meal
